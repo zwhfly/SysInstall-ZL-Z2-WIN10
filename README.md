@@ -5,7 +5,7 @@
 ### 基本环境
 
 * 笔记本: 机械革命 Z2 商务版
-* 辅助安装环境: Arch Linux, qemu, libvirt, virt-manager
+* 辅助安装环境: Arch Linux, qemu, libvirt, virt-manager，samba 共享
 * SSD: BC501 NVMe SK hynix 256GB
 
 ### 清空硬盘
@@ -92,6 +92,29 @@ virt-manager中插入光盘镜像，设置引导选项为光盘引导，开机�
 * **隐私设置**：仅开启“查找我的设备”和“位置”
 
 进入桌面后，找到 cmd.exe，输入`shutdown /s /t 0`关机。
+
+### 备份系统
+
+执行`virsh define /data/shared/ZLZD-mini.xml`恢复光驱和网卡。
+
+virt-manager 中重新放入 Windows 安装光盘，从光盘启动开机。
+
+在 PE 系统中输入以下命令备份：
+```
+wpeutil InitializeNetwork
+net use V: \\ZL-Z2-HOST\data
+
+diskpart
+
+dism /Capture-Image /ImageFile:V:\shared\Win10-01-OSInstalled-ESP.wim /CaptureDir:P:\ /Name:Win10OS-ESP /Compress:max /CheckIntegrity /Verify /EA
+dism /Capture-Image /ImageFile:V:\shared\Win10-01-OSInstalled-WinRE.wim /CaptureDir:R:\ /Name:Win10OS-WinRE /Compress:max /CheckIntegrity /Verify /EA
+dism /Capture-Image /ImageFile:V:\shared\Win10-01-OSInstalled.wim /CaptureDir:C:\ /Name:Win10OS /Compress:max /CheckIntegrity /Verify /EA
+```
+
+改进思路：
+
+1. 在设置用户名等之前备份（但注意此时 WinRE 分区可能还没有内容）
+1. 备份前将此安装记录放在桌面
 
 ## 第一轮系统设置
 
