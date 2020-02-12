@@ -55,6 +55,30 @@ virsh define /data/shared/ZLZD-mini.xml
 
 ## Windows 安装
 
+### 用安装盘启动安装
+
+准备安装光盘镜像文件：
+
+|名称|cn_windows_10_enterprise_ltsc_2019_x64_dvd_9c09ff24.iso
+|:--|:--
+|大小|4478906368 字节 (4271 MiB)
+|CRC32|0C3357E3
+|SHA1|24B59706D5EDED392423936C82BA5A83596B50CC
+|SHA256|AA4EA00581AA84999DBFE0627499B392E10C75912D6E2F1635EB7C4B9139FB5F
+
+virt-manager中插入光盘镜像，设置引导选项为光盘引导，开机，期间注意按任意键从光盘启动。
+
+进入 PE 系统后，用 diskpart 分配盘符，然后用资源管理器格式化。格式化信息：
+
+|盘符|文件系统|标签
+|:--|:--|:--
+|P:|FAT32|ESP
+|C:|NTFS|Win10
+|R:|NTFS|WinRE
+|D:|NTFS|Data
+
+然后进入 Windows 安装程序正常安装。
+
 ## 第一轮系统设置
 
 ## 驱动程序及第二轮系统设置
