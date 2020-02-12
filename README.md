@@ -111,12 +111,90 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-01-OSInstalled-WinRE.wim /Capture
 dism /Capture-Image /ImageFile:V:\shared\Win10-01-OSInstalled.wim /CaptureDir:C:\ /Name:Win10OS /Compress:max /CheckIntegrity /Verify /EA
 ```
 
+下一步仍然需要 PE 环境，所以不要关机。
+
 改进思路：
 
 1. 在设置用户名等之前备份（但注意此时 WinRE 分区可能还没有内容）
 1. 备份前将此安装记录放在桌面
 
 ## 第一轮系统设置
+
+### 安装 Windows 应用商店 APP
+
+准备好从 Windows 10 1809 安装光盘镜像提取的 Windows Store 文件：[winstore_84ac403f.wim](winstore_84ac403f.wim)。
+
+在 PE 系统中用这个命令导入 C 盘：`dism /Apply-Image /ImageFile:V:\shared\winstore_84ac403f.wim /ApplyDir:C:\ /Index:1 /CheckIntegrity /Verify /EA`。
+
+将下一步需要的命令复制到 D 盘。
+然后关机，删除光驱设备（保留网卡设备），从硬盘启动。
+
+进入桌面后，以管理员身份打开 PowerShell，执行以下命令：
+```
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.VCLibs.140.00_14.0.25426.0_x64__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.VCLibs.140.00_14.0.25426.0_x86__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.NET.Native.Runtime.1.6_1.6.24903.0_x64__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.NET.Native.Runtime.1.6_1.6.24903.0_x86__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.NET.Native.Runtime.1.7_1.7.25531.0_x64__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.NET.Native.Runtime.1.7_1.7.25531.0_x86__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.NET.Native.Framework.1.6_1.6.24903.0_x64__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.NET.Native.Framework.1.6_1.6.24903.0_x86__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.NET.Native.Framework.1.7_1.7.25531.0_x64__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.NET.Native.Framework.1.7_1.7.25531.0_x86__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.Advertising.Xaml_10.1804.2.0_x64__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.Advertising.Xaml_10.1804.2.0_x86__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.WindowsStore_11805.1001.49.0_x64__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.WindowsStore_11805.1001.49.0_neutral_split.language-zh-hans_8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.WindowsStore_11805.1001.49.0_neutral_split.scale-100_8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.WindowsStore_11805.1001.49.0_neutral_split.scale-125_8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+#Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.WindowsStore_11805.1001.4913.0_neutral_~_8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.StorePurchaseApp_11805.1001.8.0_x64__8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.StorePurchaseApp_11805.1001.8.0_neutral_split.language-zh-hans_8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.StorePurchaseApp_11805.1001.8.0_neutral_split.scale-100_8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+#Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.StorePurchaseApp_11805.1001.813.0_neutral_~_8wekyb3d8bbwe\AppXManifest.xml' -DisableDevelopmentMode
+
+```
+
+然后在开始菜单中打开 Microsoft Store，让它升级自己。
+
+### 其他设置
+
+更改硬件时钟为 UTC：
+打开注册表编辑器，找到`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation`，新建 DWORD 项，名字为`RealTimeIsUniversal`，值为1。
+
+在 Windows 设置中更改计算机名为`ZL-Z2-WIN10`。
+
+重启检查是否生效。
+
+### 语言包
+
+在 Windows 设置中添加英语语言包。
+
+安装中文和英语的“本地体验包”。
+
+### 更新系统
+
+在 Windows 设置中更新系统。反复检查到没有更新为止。
+
+### 磁盘清理
+
+重启，清理磁盘。
+然后`shutdown /s /t 0`关机。
+
+### 备份
+
+`virsh define`命令恢复虚拟机配置。
+启动进入 PE 系统。
+将此文件放在桌面。
+然后按前面的方法备份系统，备份命令为：
+```
+dism /Capture-Image /ImageFile:V:\shared\Win10-02-Settings1.wim /CaptureDir:C:\ /Name:Win10S1 /Compress:max /CheckIntegrity /Verify /EA
+```
 
 ## 驱动程序及第二轮系统设置
 
