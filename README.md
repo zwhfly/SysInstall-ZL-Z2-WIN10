@@ -198,4 +198,22 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-02-Settings1.wim /CaptureDir:C:\ 
 
 ## 驱动程序及第二轮系统设置
 
+### 开始菜单磁贴
+
+### Z2 驱动
+
+* IntelChipset-HM370-intel.com-10.1.18-201911.zip
+* IntelGraphics-8750H-intel.com-26.20.100.7755-202001.zip
+* NvidiaVideo-1050Mobile-nvidia.com-442.19-202001-notebook-win10-64bit-international-dch-whql.exe
+* IntelWiFi-AC9462-intel.com-21.60.2.1-201912-Win10x64.exe
+* RealtekGbE-8168-realtek.com-10.038.1118.2019-201911-Install_Win10_10038_12202019.zip
+* IntelBT-AC9462-intel.com-21.60.0.4-201912-Win10x64.zip
+* RealtekAudio-UAD-Mechrevo-6.0.1.8428-201804.zip
+* RealtekAudio-CreativeAudioEffectsComponent-MicrosoftCatalog-2.0.0.33-201902-01c279d6-63f6-456d-ae97-58eb8aad8571_735dbb94048705b3bf418d6c4c2bc00e8cc1a8aa.cab
+* RealtekAudio-SoundBlasterConnect-MicrosoftCatalog-2.2.7.0-201902-24af12bc-5337-4c9d-ba6e-ed58b44d1d98_2893ee4790bb16f40c631855d5756cac7abcb018.cab
+* IntelSerialIO-NUC8-intel.com-30.100.1915.1-201904.zip
+* RealtekCardReader-0BDA0129-MicrosoftCatalog-10.0.18362.31255-201912-9f6111f9-3297-47a8-8ca3-5dc42897bad6_33bc07eb8e141f73627a0acb2ded5f50e7775024.cab
+* IntelMEI-MEI-MicrosoftCatalog-1815.12.0.2021-201804-451de8b6-0274-4e77-becb-717c42774929_b0558e18ccc5bbea3a662a745d753ae7be049c80.cab
+* ControlCenter
+
 ## 应用软件
