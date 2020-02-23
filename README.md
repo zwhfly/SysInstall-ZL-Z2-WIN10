@@ -188,7 +188,7 @@ Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.StorePurchaseA
 
 ### 备份
 
-`virsh define`命令恢复虚拟机配置。
+`virsh define`命令加载`ZLZD-mini.xml`虚拟机配置文件。
 启动进入 PE 系统。
 将此文件放在桌面。
 然后按前面的方法备份系统，备份命令为：
@@ -197,6 +197,10 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-02-Settings1.wim /CaptureDir:C:\ 
 ```
 
 ## 驱动程序及第二轮系统设置
+
+### 杂项
+
+文件资源管理器工具栏展开
 
 ### 开始菜单磁贴
 
@@ -215,5 +219,11 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-02-Settings1.wim /CaptureDir:C:\ 
 * RealtekCardReader-0BDA0129-MicrosoftCatalog-10.0.18362.31255-201912-9f6111f9-3297-47a8-8ca3-5dc42897bad6_33bc07eb8e141f73627a0acb2ded5f50e7775024.cab
 * IntelMEI-MEI-MicrosoftCatalog-1815.12.0.2021-201804-451de8b6-0274-4e77-becb-717c42774929_b0558e18ccc5bbea3a662a745d753ae7be049c80.cab
 * ControlCenter
+
+### QEMU 驱动
+
+#### 驱动准备
+
+#### 驱动安装
 
 ## 应用软件
