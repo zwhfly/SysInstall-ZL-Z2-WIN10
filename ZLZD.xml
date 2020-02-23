@@ -255,7 +255,7 @@
     <shmem name='looking-glass'>
       <model type='ivshmem-plain'/>
       <size unit='M'>32</size>
-      <address type='pci' domain='0x0000' bus='0x0c' slot='0x02' function='0x0'/>
+      <address type='pci' domain='0x0000' bus='0x07' slot='0x00' function='0x0'/>
     </shmem>
   </devices>
   <qemu:commandline>

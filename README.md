@@ -269,4 +269,35 @@ mkisofs -o QEMU-Drivers-Win10x64-0.1.171.iso -UDF -v QEMU-Win10x64/
 
 #### 驱动安装
 
+用`virsh define`命令导入`ZLZD-mini.xml`虚拟机配置文件。
+
+virt-manager 中插入 virtio 驱动光盘镜像`QEMU-Drivers-Win10x64-0.1.171.iso`。
+启动虚拟机。
+
+以管理员身份打开命令行窗口，依次安装这些驱动：
+```
+"E:\dpinst.exe" /PATH E:\Balloon\w10\amd64
+"E:\dpinst.exe" /PATH E:\NetKVM\w10\amd64
+"E:\dpinst.exe" /PATH E:\pvpanic\w10\amd64
+"E:\dpinst.exe" /PATH E:\qemufwcfg\w10\amd64
+"E:\dpinst.exe" /PATH E:\qemupciserial\w10\amd64
+"E:\dpinst.exe" /PATH E:\qxldod\w10\amd64
+"E:\dpinst.exe" /PATH E:\smbus\2k8\amd64
+"E:\dpinst.exe" /PATH E:\vioinput\w10\amd64
+"E:\dpinst.exe" /PATH E:\viorng\w10\amd64
+"E:\dpinst.exe" /PATH E:\vioscsi\w10\amd64
+"E:\dpinst.exe" /PATH E:\vioserial\w10\amd64
+"E:\dpinst.exe" /PATH E:\viostor\w10\amd64
+"E:\dpinst.exe" /PATH E:\ivshmem
+"E:\guest-agent\qemu-ga-x86_64.msi"
+"E:\VirtIOBalloonService-100.77.104.17100.exe"
+"E:\SpiceVDAgent-0.10.0.exe"
+```
+
+`shutdown`命令关机。
+用`virsh define`命令加载`ZLZD.xml`虚拟机配置文件。修改硬盘的磁盘总线为SATA。
+启动虚拟机。进入桌面后用`shutdown`命令关机。
+用`virsh define`命令加载`ZLZD.xml`虚拟机配置文件。
+启动虚拟机。检查安装情况。
+
 ## 应用软件
