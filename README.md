@@ -224,6 +224,49 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-02-Settings1.wim /CaptureDir:C:\ 
 
 #### 驱动准备
 
+##### VirtIO Drivers
+
+从[https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso)下载得到`virtio-win-0.1.171.iso`。
+
+##### IVSHMEM
+
+下载[https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/upstream-virtio/virtio-win10-prewhql-0.1-161.zip](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/upstream-virtio/virtio-win10-prewhql-0.1-161.zip)。
+
+##### Spice VDAgent Service
+
+下载[https://www.spice-space.org/download/windows/vdagent/vdagent-win-0.10.0/vdagent-win-0.10.0-x64.zip](https://www.spice-space.org/download/windows/vdagent/vdagent-win-0.10.0/vdagent-win-0.10.0-x64.zip)。
+提取得到文件`vdagent.exe`和`vdservice.exe`。
+
+用 NSIS 脚本（[vdagent.nsi](vdagent.nsi)）制作安装程序：
+```
+makensis -DVERSION=0.10.0 vdagent.nsi
+```
+
+##### VirtIO Balloon Service
+
+从`virtio-win-0.1.171.iso`中提取`blnsvr.exe`。
+
+用 NSIS 脚本（[blnsvr.nsi](blnsvr.nsi)）制作安装程序：
+```
+makensis -DVERSION=100.77.104.17100 blnsvr.nsi
+```
+
+##### 制作驱动光盘镜像
+
+将下列文件放入 QEMU-Win10x64 文件夹中：
+* 提取 virtio-win-0.1.171.iso 中的文件，只保留 Win10 x64 相关的
+* 提取 Win10 x64 的 ivshmem 驱动程序文件
+* dpinst.exe
+* SpiceVDAgent-0.10.0.exe
+* VirtIOBalloonService-100.77.104.17100.exe
+
+制作 ISO 镜像文件：
+```
+mkisofs -o QEMU-Drivers-Win10x64-0.1.171.iso -UDF -v QEMU-Win10x64/
+```
+
+存档：[QEMU-Drivers-Win10x64-0.1.171.iso.7z](QEMU-Drivers-Win10x64-0.1.171.iso.7z)。
+
 #### 驱动安装
 
 ## 应用软件
