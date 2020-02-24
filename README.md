@@ -224,6 +224,13 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-02-Settings1.wim /CaptureDir:C:\ 
 
 #### 驱动准备
 
+改进方向：使用 RedHat 发布的 [virtio-win-gt-x64.msi](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win-gt-x64.msi) 安装包，但要解决：
+* vioscsi 和 viostor 驱动卸载时不被删除
+* 等下一个稳定版包含此安装包
+* IVSHMEM 不含在内
+* VDAgent 版本是否最新
+* 使用`ZLZD-mini.xml`配置时 VDAgent 会安装失败，造成整个安装包失败
+
 ##### VirtIO Drivers
 
 从[https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso](https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso)下载得到`virtio-win-0.1.171.iso`。
