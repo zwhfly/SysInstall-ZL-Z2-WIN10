@@ -200,7 +200,8 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-02-Settings1.wim /CaptureDir:C:\ 
 
 ### 杂项
 
-文件资源管理器工具栏展开
+* 文件资源管理器工具栏展开
+* 任务管理器显示详细信息、逻辑处理器使用率、选择列
 
 ### 开始菜单磁贴
 
