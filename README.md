@@ -204,6 +204,7 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-02-Settings1.wim /CaptureDir:C:\ 
 * 显示扩展名
 * 任务管理器显示详细信息、逻辑处理器使用率、选择列
 * 睡眠时间，电池：30 分钟、电源：从不
+* 启用休眠
 
 ### 启用 Windows 功能
 
