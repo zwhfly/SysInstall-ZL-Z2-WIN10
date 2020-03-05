@@ -209,6 +209,23 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-02-Settings1.wim /CaptureDir:C:\ 
 * **启用软件通知**：已启用
 * **启用通过自动更新建议的更新**：已启用
 
+### 激活 Windows
+
+管理员身份运行：
+```
+slmgr /skms [<ipv6addr>]
+slmgr /ato
+slmgr /ckms
+```
+
+### 任务栏设置
+
+右键任务栏 - 任务栏设置：
+* 使用小任务栏按钮
+* 右键开始菜单不使用 Powershell
+* 合并任务栏按钮：任务栏已满时
+* 托盘图标：任务管理器，安全删除硬件
+
 ### 杂项
 
 * 文件资源管理器工具栏展开
