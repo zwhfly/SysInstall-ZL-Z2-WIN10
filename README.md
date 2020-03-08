@@ -204,7 +204,7 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-02-Settings1.wim /CaptureDir:C:\ 
 * **指定设备驱动程序源位置的搜索顺序**：不搜索 Windows 更新
 
 组策略 - 计算机配置 - 管理模板 - Windows 组件 - Windows 更新：
-* **配置自动更新**：2-通知下载和自动安装
+* **配置自动更新**：2-通知下载和自动安装；安装其他 Microsoft 产品的更新
 * **Windows 更新不包括驱动程序**：已启用
 * **启用软件通知**：已启用
 * **启用通过自动更新建议的更新**：已启用
