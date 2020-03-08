@@ -228,11 +228,16 @@ slmgr /ckms
 
 ### 启用 Windows 功能
 
+控制面板：
 * .net 3.5
 * Hyper-V 管理工具
 * NFS 服务（及所有子功能）
 * Telnet Client
 * TFTP Client
+
+设置：
+* XPS 查看器
+* OpenSSH 服务器
 
 ### 开始菜单磁贴
 
@@ -248,7 +253,6 @@ slmgr /ckms
 * 自动播放：每次都询问
 * 关闭代理自动检测
 * 开始菜单“显示最常用的应用”
-* 管理可选功能：XPS 查看器，OpenSSH 服务器
 * 输入法默认英文；取消 Shift 中英切换
 * 防火墙高级设置：入站规则，启用回显请求
 
