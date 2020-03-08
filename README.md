@@ -236,8 +236,6 @@ slmgr /ckms
 
 ### 开始菜单磁贴
 
-### cmd.exe 字体
-
 ### 杂项
 
 * 文件资源管理器工具栏展开
@@ -358,3 +356,5 @@ virt-manager 中插入 virtio 驱动光盘镜像`QEMU-Drivers-Win10x64-0.1.171.i
 启动虚拟机。检查安装情况。
 
 ## 应用软件
+
+TODO: cmd.exe 字体
