@@ -358,6 +358,8 @@ virt-manager 中插入 virtio 驱动光盘镜像`QEMU-Drivers-Win10x64-0.1.171.i
 用`virsh define`命令加载`ZLZD.xml`虚拟机配置文件。
 启动虚拟机。检查安装情况。
 
+### 更新、清理、备份
+
 ## 应用软件
 
 TODO: cmd.exe 字体
