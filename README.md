@@ -327,7 +327,9 @@ Windows Registry Editor Version 5.00
 ".tif"="PhotoViewer.FileAssoc.Tiff"
 ```
 
-创建以上格式以及`.ico`格式的文件并选择始终使用 Windows 照片查看器打开。
+* 创建以上格式的文件并选择始终使用 Windows 照片查看器打开
+* 创建`.ico`格式的文件并选择始终使用 Windows 照片查看器打开
+* 创建`.gif`格式的文件并选择始终使用 Internet Explorer 打开
 
 ### 杂项
 
