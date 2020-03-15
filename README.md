@@ -261,19 +261,33 @@ slmgr /ckms
 * **系统**：控制面板 -> 系统和安全 -> 系统 -> 右键 -> 创建快捷方式 -> 移动到 MyStartMenu 中
 * **系统属性**：在 MyStartMenu 中创建快捷方式`%SystemRoot%\System32\control.exe %SystemRoot%\System32\sysdm.cpl`，图标在 cpl 文件中
 * **Windows PowerShell**：开始菜单 -> Windows PowerShell -> Windows PowerShell
-* **PowerShell(管理员)**
+* **PowerShell(管理员)**：在 MyStartMenu 中创建文件`powershell.admin.bat`，然后创建它的快捷方式，配置快捷方式为“用管理员身份运行”
 * **任务管理器**：开始菜单 -> Windows 系统 -> 任务管理器
 * **资源监视器**：开始菜单 -> Windows 管理工具 -> 资源监视器
 * **注册表编辑器**：开始菜单 -> Windows 管理工具 -> 注册表编辑器
 * **Internet Explorer**：开始菜单 -> Windows 附件 -> Internet Explorer
 * **命令提示符**：开始菜单 -> Windows 系统 -> 命令提示符
-* **命令提示符(管理员)**
+* **命令提示符(管理员)**：在 MyStartMenu 中创建文件`cmd.admin.bat`，然后创建它的快捷方式，配置快捷方式为“用管理员身份运行”
 * **此电脑**：开始菜单 -> Windows 系统 -> 此电脑
 * **Data (D)**：在 MyStartMenu 中创建快捷方式`D:\`
 * **下载**：在 MyStartMenu 中创建快捷方式`C:\Users\ZL\Downloads`
 * **计算器**：开始菜单 -> Windows 附件 -> 计算器
 * **记事本**：开始菜单 -> Windows 附件 -> 记事本
 * **画图**：开始菜单 -> Windows 附件 -> 画图
+
+`powershell.admin.bat`内容：
+```
+C:
+cd C:\Users\ZL
+start powershell.exe
+```
+
+`cmd.admin.bat`内容：
+```
+C:
+cd C:\Users\ZL
+start "命令提示符"
+```
 
 ### 杂项
 
