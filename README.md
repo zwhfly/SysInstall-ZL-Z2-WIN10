@@ -233,6 +233,10 @@ slmgr /ckms
 
 ### 开始菜单磁贴
 
+按下图组织开始菜单磁贴:
+
+![StartMenu](StartMenu.png)
+
 ### 杂项
 
 * 使用小任务栏按钮
