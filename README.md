@@ -251,15 +251,15 @@ slmgr /ckms
 * **控制面板**：开始菜单 -> Windows 系统 -> 控制面板
 * **网络连接**：在 MyStartMenu 中创建快捷方式`%SystemRoot%\System32\control.exe %SystemRoot%\System32\ncpa.cpl`，图标在 cpl 文件中
 * **Internet 属性**：在 MyStartMenu 中创建快捷方式`%SystemRoot%\System32\control.exe %SystemRoot%\System32\inetcpl.cpl,,4`，图标在 cpl 文件中
-* **组策略**
-* **本地安全策略**
-* **服务**
-* **事件查看器**
-* **计算机管理**
-* **系统配置**
-* **高级安全 Windows Defender 防火墙**
-* **系统**
-* **系统属性**
+* **组策略**：在 MyStartMenu 中创建快捷方式`%SystemRoot%\System32\gpedit.msc`
+* **本地安全策略**：开始菜单 -> Windows 管理工具 -> 本地安全策略
+* **服务**：开始菜单 -> Windows 管理工具 -> 服务
+* **事件查看器**：开始菜单 -> Windows 管理工具 -> 事件查看器
+* **计算机管理**：开始菜单 -> Windows 管理工具 -> 计算机管理
+* **系统配置**：开始菜单 -> Windows 管理工具 -> 系统配置
+* **高级安全 Windows Defender 防火墙**：开始菜单 -> Windows 管理工具 -> 高级安全 Windows Defender 防火墙
+* **系统**：控制面板 -> 系统和安全 -> 系统 -> 右键 -> 创建快捷方式 -> 移动到 MyStartMenu 中
+* **系统属性**：在 MyStartMenu 中创建快捷方式`%SystemRoot%\System32\control.exe %SystemRoot%\System32\sysdm.cpl`，图标在 cpl 文件中
 * **Windows PowerShell**
 * **PowerShell(管理员)**
 * **任务管理器**
