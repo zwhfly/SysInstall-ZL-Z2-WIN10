@@ -233,20 +233,24 @@ slmgr /ckms
 
 ### 开始菜单磁贴
 
-按下图组织开始菜单磁贴:
+#### 按下图组织开始菜单磁贴:
 
 ![StartMenu](StartMenu.png)
 
+#### 创建过程
+
+创建文件夹`C:\Users\ZL\AppData\Roaming\Microsoft\Windows\Start Menu\MyStartMenu`。
+
 快捷方式：
-* **Microsoft Store**
-* **更新和安全**
-* **截图工具**
-* **屏幕键盘**
-* **开关防火墙**
-* **远程桌面连接**
-* **控制面板**
-* **网络连接**
-* **Internet 属性**
+* **Microsoft Store**：开始菜单 -> Microsoft Store
+* **Windows 更新**：“设置” App -> 更新和安全 -> Windows 更新
+* **截图工具**：开始菜单 -> Windows 附件 -> 截图工具
+* **屏幕键盘**：开始菜单 -> Windows 轻松使用 -> 屏幕键盘
+* **开关防火墙**：在 MyStartMenu 中创建快捷方式`%SystemRoot%\System32\control.exe /name Microsoft.WindowsFirewall /page pageConfigureSettings`，图标在`%SystemRoot%\System32\FirewallControlPanel.dll`
+* **远程桌面连接**：开始菜单 -> Windows 附件 -> 远程桌面连接
+* **控制面板**：开始菜单 -> Windows 系统 -> 控制面板
+* **网络连接**：在 MyStartMenu 中创建快捷方式`%SystemRoot%\System32\control.exe %SystemRoot%\System32\ncpa.cpl`，图标在 cpl 文件中
+* **Internet 属性**：在 MyStartMenu 中创建快捷方式`%SystemRoot%\System32\control.exe %SystemRoot%\System32\inetcpl.cpl,,4`，图标在 cpl 文件中
 * **组策略**
 * **本地安全策略**
 * **服务**
