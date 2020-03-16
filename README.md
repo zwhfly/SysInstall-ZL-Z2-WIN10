@@ -200,6 +200,8 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-02-Settings1.wim /CaptureDir:C:\ 
 
 ### Windows Update 设置
 
+启动系统，virt-manager 中断开网卡连接。
+
 组策略 - 计算机配置 - 管理模板 - 系统 - 设备安装：
 * **指定设备驱动程序源位置的搜索顺序**：不搜索 Windows 更新
 
@@ -208,6 +210,8 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-02-Settings1.wim /CaptureDir:C:\ 
 * **Windows 更新不包括驱动程序**：已启用
 * **启用软件通知**：已启用
 * **启用通过自动更新建议的更新**：已启用
+
+重启系统，virt-manager 中恢复网卡连接。
 
 ### 激活 Windows
 
