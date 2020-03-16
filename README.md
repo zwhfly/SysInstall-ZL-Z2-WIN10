@@ -300,6 +300,7 @@ slmgr /ckms
 * **计算器**：开始菜单 -> Windows 附件 -> 计算器
 * **记事本**：开始菜单 -> Windows 附件 -> 记事本
 * **画图**：开始菜单 -> Windows 附件 -> 画图
+* **完全关机**：在 MyStartMenu 中创建快捷方式`%SystemRoot%\System32\shutdown.exe /s /t 0`，所用图标在`SHELL32.dll`中
 
 `powershell.admin.bat`内容：
 ```
