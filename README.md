@@ -348,6 +348,50 @@ Windows Registry Editor Version 5.00
 * 创建`.ico`格式的文件并选择始终使用 Windows 照片查看器打开
 * 创建`.gif`格式的文件并选择始终使用 Internet Explorer 打开
 
+### 文件资源管理器右键菜单转到命令提示符
+
+将这段代码保存为`goto-cmd.reg`并导入到注册表：
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\background\shell\goto-cmd]
+@="-> cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\background\shell\goto-cmd\command]
+@="cmd.exe /k pushd \"%V\" & title 命令提示符"
+
+[HKEY_CLASSES_ROOT\Directory\background\shell\goto-cmd-admin]
+@="-> cmd.exe (Administrator)"
+
+[HKEY_CLASSES_ROOT\Directory\background\shell\goto-cmd-admin\command]
+@="\"C:\\Programs\\exec-as-admin\\exec-as-admin.exe\" cmd.exe /k pushd \"%V\" & title 命令提示符"
+
+[HKEY_CLASSES_ROOT\Directory\shell\goto-cmd]
+@="-> cmd.exe"
+
+[HKEY_CLASSES_ROOT\Directory\shell\goto-cmd\command]
+@="cmd.exe /k pushd \"%V\" & title 命令提示符"
+
+[HKEY_CLASSES_ROOT\Directory\shell\goto-cmd-admin]
+@="-> cmd.exe (Administrator)"
+
+[HKEY_CLASSES_ROOT\Directory\shell\goto-cmd-admin\command]
+@="\"C:\\Programs\\exec-as-admin\\exec-as-admin.exe\" cmd.exe /k pushd \"%V\" & title 命令提示符"
+
+[HKEY_CLASSES_ROOT\Drive\shell\goto-cmd]
+@="-> cmd.exe"
+
+[HKEY_CLASSES_ROOT\Drive\shell\goto-cmd\command]
+@="cmd.exe /k pushd \"%V\" & title 命令提示符"
+
+[HKEY_CLASSES_ROOT\Drive\shell\goto-cmd-admin]
+@="-> cmd.exe (Administrator)"
+
+[HKEY_CLASSES_ROOT\Drive\shell\goto-cmd-admin\command]
+@="\"C:\\Programs\\exec-as-admin\\exec-as-admin.exe\" cmd.exe /k pushd \"%V\" & title 命令提示符"
+
+```
+
 ### Z2 驱动
 
 * IntelChipset-HM370-intel.com-10.1.18-201911.zip
