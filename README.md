@@ -235,6 +235,10 @@ slmgr /ckms
 * XPS 查看器
 * OpenSSH 服务器
 
+### exec-as-admin
+
+编译[exec-as-admin](https://github.com/zwhfly/exec-as-admin)，得到[exec-as-admin.exe](exec-as-admin.exe)，放在路径`C:\Programs\exec-as-admin\exec-as-admin.exe`。
+
 ### 杂项
 
 * 使用小任务栏按钮
