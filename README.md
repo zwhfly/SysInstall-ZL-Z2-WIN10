@@ -117,6 +117,7 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-01-OSInstalled.wim /CaptureDir:C:
 
 1. 在设置用户名等之前备份（但注意此时 WinRE 分区可能还没有内容）
 1. 备份前将此安装记录放在桌面
+1. 安装记录放置位置为`C:\Users\Public\Desktop`
 
 ## 第一轮系统设置
 
@@ -195,6 +196,9 @@ Add-AppXPackage -Register 'C:\Program Files\WindowsApps\Microsoft.StorePurchaseA
 ```
 dism /Capture-Image /ImageFile:V:\shared\Win10-02-Settings1.wim /CaptureDir:C:\ /Name:Win10S1 /Compress:max /CheckIntegrity /Verify /EA
 ```
+
+改进方向：
+1. 安装记录放置位置改为`C:\Users\Public\Desktop`
 
 ## 驱动程序及第二轮系统设置
 
@@ -393,6 +397,30 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\Drive\shell\goto-cmd-admin\command]
 @="\"C:\\Programs\\exec-as-admin\\exec-as-admin.exe\" cmd.exe /k pushd \"%V\" & title 命令提示符"
 
+```
+
+### 移动用户文件位置
+
+#### “桌面”、“文档”、“下载”文件夹
+
+执行以下命令备份文件夹（忽略三个 JUNCTION 文件夹拒绝访问错误）：
+```
+del C:\Users\ZL\Desktop\README.md
+pushd C:\Users\ZL
+mkdir Backup
+move Documents Backup\
+move Desktop Backup\
+move Downloads Backup\
+xcopy /EFHKCB Backup\* .\
+```
+
+右键这三个文件夹打开属性设置，移动位置到`D:\WinZL\Desktop`、`D:\WinZL\Documents`、`D:\WinZL\Downloads`。
+
+#### `.ssh`目录
+
+```
+mkdir D:\WinZL\.ssh
+mklink /J C:\Users\ZL\.ssh D:\WinZL\.ssh
 ```
 
 ### Z2 驱动
