@@ -528,6 +528,17 @@ virt-manager 中插入 virtio 驱动光盘镜像`QEMU-Drivers-Win10x64-0.1.171.i
 
 ### 更新、清理、备份
 
+更新。
+
+清理。
+
+完全关机后用`ZLZD-mini.xml`配置启动 PE 环境。
+把此文件放在`C:\Users\Public\Desktop`。
+执行：
+```
+dism /Capture-Image /ImageFile:V:\shared\Win10-03-Settings2_Drivers.wim /CaptureDir:C:\ /Name:Win10S2D /Compress:max /CheckIntegrity /Verify /EA
+```
+
 ## 应用软件
 
 TODO: cmd.exe 字体
