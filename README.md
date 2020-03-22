@@ -541,4 +541,29 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-03-Settings2_Drivers.wim /Capture
 
 ## 应用软件
 
-TODO: cmd.exe 字体
+### .net
+
+* ndp48-x86-x64-allos-enu.exe
+* ndp48-x86-x64-allos-chs.exe
+
+### Microsoft Edge
+
+* 官网下载，安装
+* 地址栏搜索引擎设为必应
+* 启动时从上次中断的地方继续
+* 在下载之前询问每个文件的保存位置
+* 到 Windows 设置中设置 Web 浏览器默认应用为 Microsoft Edge
+
+### 7z
+
+* 7z1900-x64.exe
+
+### Notepad++
+
+* 官网下载 64 位安装程序安装
+* 语言选简体中文
+
+### TODO
+
+* cmd.exe 字体
+
