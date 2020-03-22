@@ -311,7 +311,7 @@ curl http ... /exec-as-admin.exe --output C:\Programs\exec-as-admin\exec-as-admi
 * **计算器**：开始菜单 -> Windows 附件 -> 计算器
 * **记事本**：开始菜单 -> Windows 附件 -> 记事本
 * **画图**：开始菜单 -> Windows 附件 -> 画图
-* **完全关机**：在 MyStartMenu 中创建文件`shutdown-fully.bat`，内容为`shutdown.exe /s /t 0`，然后创建它的快捷方式，所用图标在`SHELL32.dll`中（只放在开始菜单，不放在开始屏幕）
+* **完全关机**：在 MyStartMenu 中创建文件`shutdown-fully.bat`，内容为`shutdown.exe /s /t 0`，然后创建它的快捷方式，右键属性中配置运行方式为“最小化”，所用图标在`SHELL32.dll`中；只放在开始菜单，不放在开始屏幕
 
 ### 启用 Windows 照片查看器
 
