@@ -563,6 +563,22 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-03-Settings2_Drivers.wim /Capture
 * 官网下载 64 位安装程序安装
 * 语言选简体中文
 
+### Microsoft Office
+
+* 下载 Office Deployment Tool 安装（解压）得到`setup.exe`
+* 用[office-deploy.xml](office-deploy.xml)下载并安装 Office：
+```
+setup.exe /download office-deploy.xml
+setup.exe /configure office-deploy.xml
+```
+* 激活：
+```
+pushd C:\Program Files\Microsoft Office\Office16
+cscript ospp.vbs /sethst:<ipv6addr>
+cscript ospp.vbs /act
+cscript ospp.vbs /remhst
+```
+
 ### TODO
 
 * cmd.exe 字体
