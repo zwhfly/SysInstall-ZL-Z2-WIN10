@@ -579,6 +579,12 @@ cscript ospp.vbs /act
 cscript ospp.vbs /remhst
 ```
 
+### Acrobat Reader
+
+* 到 https://get.adobe.com/cn/reader/enterprise/ 下载最新中文安装包
+* 安装
+* 检查更新
+
 ### TODO
 
 * cmd.exe 字体
