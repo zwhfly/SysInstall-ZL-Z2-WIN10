@@ -596,6 +596,13 @@ cscript ospp.vbs /remhst
 * 主页使用“Firefox 主页”
 * 默认搜索引擎改为 Bing
 
+### VMware Workstation
+
+* VMware 官网下载最新 VMware Workstation Pro
+* 安装
+* 设置虚拟机默认位置`D:\VM`
+* 仅在虚拟机开机时显示托盘图标
+
 ### TODO
 
 * cmd.exe 字体
