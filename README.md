@@ -585,6 +585,17 @@ cscript ospp.vbs /remhst
 * 安装
 * 检查更新
 
+### Firefox
+
+* 到 https://www.mozilla.org/en-US/firefox/all/ 下载最新 64 位中文安装包
+* 安装
+* 设置启动时恢复先前的浏览状态
+* 不检查是否为默认浏览器
+* 下载保存位置每次都询问
+* 不自动安装更新，不使用系统服务安装更新
+* 主页使用“Firefox 主页”
+* 默认搜索引擎改为 Bing
+
 ### TODO
 
 * cmd.exe 字体
