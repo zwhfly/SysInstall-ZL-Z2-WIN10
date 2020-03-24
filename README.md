@@ -637,6 +637,11 @@ cscript ospp.vbs /remhst
 * 到微软网站下载程序包 (https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite)
 * 解压到`C:\Programs\SysinternalsSuite`
 
+### NirCmd
+
+* 到官网下载最新 64 位程序包 (https://www.nirsoft.net/utils/nircmd.html)
+* 解压到`C:\Programs\NirCmd`
+
 ### TODO
 
 * cmd.exe 字体
