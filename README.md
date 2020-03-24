@@ -632,6 +632,11 @@ cscript ospp.vbs /remhst
 * 安装位置设为`C:\Programs\Python\Python3\CPython\x64\Python38`（或 `Python39`...）
 * 安装最后一步，点击“Disable path length limit”
 
+### Sysinternals Suite
+
+* 到微软网站下载程序包 (https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite)
+* 解压到`C:\Programs\SysinternalsSuite`
+
 ### TODO
 
 * cmd.exe 字体
