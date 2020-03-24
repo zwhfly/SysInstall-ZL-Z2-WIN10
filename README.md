@@ -603,6 +603,17 @@ cscript ospp.vbs /remhst
 * 设置虚拟机默认位置`D:\VM`
 * 仅在虚拟机开机时显示托盘图标
 
+### MSYS2
+
+操作全部是在接入透明代理网络的环境下。
+
+* 到官网（https://www.msys2.org/）下载最新 64 位安装包
+* 按页面上的步骤安装
+* 安装位置为`C:\Programs\MSYS2\msys64`
+* 设置字体为 Consolas 10 号
+* UI Language 设为 zh_CN
+* 窗口大小设为 120 * 30
+
 ### TODO
 
 * cmd.exe 字体
