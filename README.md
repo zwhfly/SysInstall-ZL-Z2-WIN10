@@ -614,6 +614,13 @@ cscript ospp.vbs /remhst
 * UI Language 设为 zh_CN
 * 窗口大小设为 120 * 30
 
+### Shadowsocks
+
+* 在 GitHub 下载最新版 shadowsocks-windows (https://github.com/shadowsocks/shadowsocks-windows/releases)
+* 解压到`C:\Programs\Shadowsocks`
+* 编辑/拷贝`gui-config.json`文件
+* 启动，允许通过防火墙
+
 ### TODO
 
 * cmd.exe 字体
