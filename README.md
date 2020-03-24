@@ -651,7 +651,7 @@ cscript ospp.vbs /remhst
 
 ### 灵格斯
 
-* 到官网(http://www.lingoes.cn)下载最新 64 位安装包
+* 到官网下载最新 64 位安装包 (http://www.lingoes.cn)
 * 双击安装
 * 导入词典备份
 
