@@ -621,6 +621,17 @@ cscript ospp.vbs /remhst
 * 编辑/拷贝`gui-config.json`文件
 * 启动，允许通过防火墙
 
+### Python 3
+
+* 官网下载最新版 64 位 web-based installer
+* 在 installer exe 所在文件夹打开命令提示符，执行`python-3.x.y-amd64-webinstall.exe /layout .`
+* 下载完成后，双击 installer exe 安装
+* “Customize installation”
+* “py launcher for all users”
+* “Advanced Options”中，除“Add Python to environment variables”都选中
+* 安装位置设为`C:\Programs\Python\Python3\CPython\x64\Python38`（或 `Python39`...）
+* 安装最后一步，点击“Disable path length limit”
+
 ### TODO
 
 * cmd.exe 字体
