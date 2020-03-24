@@ -649,6 +649,12 @@ cscript ospp.vbs /remhst
 * 显示高级设置，安装打印机驱动和 VPN
 * 选项设置中“呼入的LAN连接”选择“接受”
 
+### 灵格斯
+
+* 到官网(http://www.lingoes.cn)下载最新 64 位安装包
+* 双击安装
+* 导入词典备份
+
 ### TODO
 
 * cmd.exe 字体
