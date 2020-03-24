@@ -642,6 +642,13 @@ cscript ospp.vbs /remhst
 * 到官网下载最新 64 位程序包 (https://www.nirsoft.net/utils/nircmd.html)
 * 解压到`C:\Programs\NirCmd`
 
+### TeamViewer
+
+* 到官网下载最新安装包 (https://www.teamviewer.cn/cn/download/windows/)
+* 双击安装，选择第一项“安装”
+* 显示高级设置，安装打印机驱动和 VPN
+* 选项设置中“呼入的LAN连接”选择“接受”
+
 ### TODO
 
 * cmd.exe 字体
