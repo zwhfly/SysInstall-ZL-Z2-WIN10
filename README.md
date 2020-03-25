@@ -553,6 +553,8 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-03-Settings2_Drivers.wim /Capture
 * 启动时从上次中断的地方继续
 * 在下载之前询问每个文件的保存位置
 * 到 Windows 设置中设置 Web 浏览器默认应用为 Microsoft Edge
+* 到 Chrome Web Store 商店 (https://chrome.google.com/webstore/category/extensions) 搜索安装 Proxy SwitchyOmega
+* 配置 Proxy SwitchyOmega（“在 InPrivate 中允许”，以及代理设置）
 
 ### 7z
 
@@ -595,6 +597,8 @@ cscript ospp.vbs /remhst
 * 不自动安装更新，不使用系统服务安装更新
 * 主页使用“Firefox 主页”
 * 默认搜索引擎改为 Bing
+* 安装附件组件 FoxyProxy Standard 并配置
+* 安装附加组件 Adblock Plus 并配置
 
 ### VMware Workstation
 
