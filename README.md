@@ -655,6 +655,16 @@ cscript ospp.vbs /remhst
 * 双击安装
 * 导入词典备份
 
+### PotPlayer
+
+* 官网下载最新 64 位安装包 (https://potplayer.daum.net/)
+* 双击安装
+* 选择“关联所有格式”
+* 选择“安装额外的编解码器”
+* 如果额外的编解码器自动安装不正常，手动下载安装包 (http://get.daum.net/PotPlayer/Codec/OpenCodecSetup64.exe)
+* 然后双击安装 OpenCodec
+* 选中所有四个组件（Core Files, OpenCodec Files, FFmpeg Files, Intel H.264 MVC Decoder）
+
 ### TODO
 
 * cmd.exe 字体
