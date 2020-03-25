@@ -665,6 +665,14 @@ cscript ospp.vbs /remhst
 * 然后双击安装 OpenCodec
 * 选中所有四个组件（Core Files, OpenCodec Files, FFmpeg Files, Intel H.264 MVC Decoder）
 
+### WebP Codec for Windows
+
+* 下载安装包 (https://storage.googleapis.com/downloads.webmproject.org/releases/webp/WebpCodecSetup.exe)
+* 检查安装包 Google 数字签名
+* 双击安装
+* 选择完整安装
+* 最后一步选择预览示例文件，检查能否正常查看`.webp`文件
+
 ### TODO
 
 * cmd.exe 字体
