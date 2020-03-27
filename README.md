@@ -541,6 +541,15 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-03-Settings2_Drivers.wim /Capture
 
 ## 应用软件
 
+### 补充设置
+
+* **固定“此电脑”到任务栏**：开始菜单中找到“此电脑”，右键然后点击“固定到任务栏”
+* **在标题栏和窗口边框显示颜色**
+* **从我的背景自动选取一种主题色**
+
+改进方向：
+1. 在上一轮中设置
+
 ### .net
 
 * ndp48-x86-x64-allos-enu.exe
