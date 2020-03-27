@@ -678,6 +678,18 @@ cscript ospp.vbs /remhst
 * 选择完整安装
 * 最后一步选择预览示例文件，检查能否正常查看`.webp`文件
 
+### 其他应用
+
+从 Microsoft Store 中安装其他应用：
+* Skype
+* Microsoft 远程桌面
+* Windows 地图
+* Windows 计算器
+* Microsoft 便笺
+* 画图 3D
+* VP9 视频扩展
+* Microsoft 照片
+
 ### 在开始屏幕布置新装软件的快捷方式
 
 ### TODO
