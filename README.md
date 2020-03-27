@@ -550,6 +550,12 @@ dism /Capture-Image /ImageFile:V:\shared\Win10-03-Settings2_Drivers.wim /Capture
 改进方向：
 1. 在上一轮中设置
 
+### WinBtrfs
+
+* 到 GitHub 项目 Release 页面下载最新安装包
+* 按项目说明，右键 .inf 文件安装
+* 按项目说明，在注册表中映射用户和组到 ID 1000
+
 ### .net
 
 * ndp48-x86-x64-allos-enu.exe
